@@ -52,7 +52,6 @@ export default function Navigation({ onOpenModal }: NavigationProps) {
             <Link href="/services" className={pathname === '/services' ? 'text-emerald-400' : 'hover:text-emerald-400'}>Services</Link>
             <Link href="/location" className={pathname === '/location' ? 'text-emerald-400' : 'hover:text-emerald-400'}>Location</Link>
             <Link href="/blog" className={pathname === '/blog' ? 'text-emerald-400' : 'hover:text-emerald-400'}>Blog</Link>
-            <Link href="/blog-feed" className={pathname?.startsWith('/blog-feed') ? 'text-emerald-400' : 'hover:text-emerald-400'}>Knowledge Hub</Link>
             <button onClick={onOpenModal} className="px-7 py-2.5 bg-emerald-500 text-white rounded-full font-bold shadow-lg shadow-emerald-500/20">
               Find a Specialist
             </button>
@@ -81,7 +80,6 @@ export default function Navigation({ onOpenModal }: NavigationProps) {
           <Link href="/services" onClick={() => setIsMobileMenuOpen(false)} className="text-left px-4 py-3 font-bold">Services</Link>
           <Link href="/location" onClick={() => setIsMobileMenuOpen(false)} className="text-left px-4 py-3 font-bold">Location</Link>
           <Link href="/blog" onClick={() => setIsMobileMenuOpen(false)} className="text-left px-4 py-3 font-bold">Blog</Link>
-          <Link href="/blog-feed" onClick={() => setIsMobileMenuOpen(false)} className="text-left px-4 py-3 font-bold">Knowledge Hub</Link>
           <button 
             onClick={() => { 
               onOpenModal(); 
