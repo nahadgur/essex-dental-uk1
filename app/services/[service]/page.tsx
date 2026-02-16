@@ -128,7 +128,7 @@ export default function ServiceCitiesPage({ params }: { params: { service: strin
                   Ready to Start Your Treatment?
                 </h2>
                 <p className="text-slate-400 max-w-xl font-medium">
-                  Connect with elite implant specialists specializing in{' '}
+                  Connect with elite implant specialists specialising in{' '}
                   {service.title.toLowerCase()}.
                 </p>
               </div>
@@ -150,11 +150,11 @@ export default function ServiceCitiesPage({ params }: { params: { service: strin
           <div className="flex flex-col gap-16">
             {Object.entries(filteredLocations).map(([region, cities]) => (
               <div key={region}>
-                <h2 className="text-2xl font-black text-white mb-6 px-2">
+                <h2 className="text-2xl md:text-3xl font-black text-white mb-6 px-2">
                   {region}
                 </h2>
 
-                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-3">
+                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
                   {cities.map(city => {
                     const citySlug = city
                       .toLowerCase()
@@ -164,10 +164,10 @@ export default function ServiceCitiesPage({ params }: { params: { service: strin
                       <Link
                         key={city}
                         href={`/services/${params.service}/${citySlug}`}
-                        className="text-left px-4 py-3.5 rounded-2xl border transition-all font-bold text-xs flex items-center justify-between group bg-slate-900/40 border-white/5 text-slate-400 hover:border-emerald-500/30 hover:text-white hover:bg-slate-800/40"
+                        className="text-left px-6 py-5 rounded-2xl border transition-all font-bold text-base sm:text-lg leading-relaxed flex items-center justify-between group bg-slate-900/40 border-white/5 text-slate-300 hover:border-emerald-500/30 hover:text-white hover:bg-slate-800/40"
                       >
-                        <span>{city}</span>
-                        <ArrowUpRight className="w-3 h-3 opacity-0 group-hover:opacity-100 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" />
+                        <span className="leading-snug">{city}</span>
+                        <ArrowUpRight className="w-5 h-5 opacity-0 group-hover:opacity-100 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" />
                       </Link>
                     );
                   })}
