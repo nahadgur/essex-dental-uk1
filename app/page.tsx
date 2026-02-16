@@ -16,7 +16,6 @@ const MARQUEE_IMAGES = [
   'https://images.pexels.com/photos/6629364/pexels-photo-6629364.jpeg',
   'https://images.pexels.com/photos/5355826/pexels-photo-5355826.jpeg',
   'https://images.pexels.com/photos/3779699/pexels-photo-3779699.jpeg',
-  'https://images.pexels.com/photos/28470229/pexels-photo-28470229.jpeg',
 ];
 
 
@@ -81,7 +80,7 @@ export default function Home() {
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-slate-950 px-4">
         <div className="absolute inset-0 z-0">
           <img 
-            src="https://images.unsplash.com/photo-1694675236489-d73651370688?q=80&w=880&auto=format&fit=crop" 
+            src="https://images.pexels.com/photos/4687905/pexels-photo-4687905.jpeg" 
             className="w-full h-full object-cover opacity-90 animate-slow-zoom brightness-110" 
             alt="Dental Implants UK" 
           />
