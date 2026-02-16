@@ -1,4 +1,4 @@
-0.'use client';
+'use client';
 
 import React, { useState, useMemo, useEffect } from 'react';
 import { Globe, ArrowUpRight, ChevronUp } from '@/components/Icons';
