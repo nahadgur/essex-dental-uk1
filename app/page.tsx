@@ -80,7 +80,7 @@ export default function Home() {
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-slate-950 px-4">
         <div className="absolute inset-0 z-0">
           <img 
-            src="https://images.pexels.com/photos/3779699/pexels-photo-3779699.jpeg" 
+            src="https://images.pexels.com/photos/4687905/pexels-photo-4687905.jpeg" 
             className="w-full h-full object-cover opacity-90 animate-slow-zoom brightness-110" 
             alt="Dental Implants UK" 
           />
@@ -93,9 +93,9 @@ export default function Home() {
             <span>Premium Dental Implant Specialists</span>
           </div>
           <h1 className="text-4xl sm:text-6xl lg:text-8xl font-black text-white leading-tight">
-            The Network for <br />
+            The Network For <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-green-400 to-emerald-400 animate-gradient">
-              Permanent Smiles.
+              Dental Implants In Essex.
             </span>
           </h1>
           <p className="text-lg lg:text-2xl text-slate-300 max-w-3xl mx-auto font-medium">
