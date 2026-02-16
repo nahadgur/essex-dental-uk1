@@ -80,7 +80,7 @@ export default function Home() {
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-slate-950 px-4">
         <div className="absolute inset-0 z-0">
           <img 
-            src="https://images.pexels.com/photos/6502343/pexels-photo-6502343.jpeg" 
+            src="https://images.pexels.com/photos/3779699/pexels-photo-3779699.jpeg" 
             className="w-full h-full object-cover opacity-90 animate-slow-zoom brightness-110" 
             alt="Dental Implants UK" 
           />
