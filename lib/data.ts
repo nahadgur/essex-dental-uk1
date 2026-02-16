@@ -98,90 +98,16 @@ export const BLOG_POSTS = [
 ];
 
 export const LOCATIONS: Record<string, string[]> = {
-  "England": [
-    // Major Cities
-    "London", "Birmingham", "Manchester", "Leeds", "Liverpool", "Sheffield", "Bristol", 
-    "Newcastle upon Tyne", "Nottingham", "Leicester", "Coventry", "Bradford", "Hull", 
-    "Southampton", "Portsmouth", "Plymouth", "Reading", "Derby", "Stoke-on-Trent",
-    "Wolverhampton", "Brighton", "Milton Keynes", "Swindon", "Northampton", "Luton",
-    "York", "Peterborough", "Oxford", "Cambridge", "Gloucester", "Exeter", "Ipswich",
-    "Bournemouth", "Norwich", "Slough", "Middlesbrough", "Sunderland", "Basildon",
-    
-    // Large Towns
-    "Blackpool", "Preston", "Bolton", "Huddersfield", "Southend-on-Sea", "Chelmsford",
-    "Colchester", "Doncaster", "Rochdale", "Rotherham", "Warrington", "Wigan",
-    "Stockport", "Oldham", "Barnsley", "Dudley", "Walsall", "Telford", "Crawley",
-    "Gillingham", "Hastings", "Worthing", "Eastbourne", "Maidstone", "Canterbury",
-    
-    // Medium Towns
-    "Blackburn", "Burnley", "Bath", "Darlington", "Grimsby", "Hartlepool", "Carlisle",
-    "Chester", "Lancaster", "Lincoln", "Mansfield", "Scunthorpe", "Shrewsbury",
-    "Stafford", "Stoke", "Wakefield", "Watford", "Worcester", "Wrexham", "Ashford",
-    "Basingstoke", "Bedford", "Birkenhead", "Bracknell", "Bury", "Cheltenham",
-    "Chesterfield", "Crewe", "Dartford", "Gateshead", "Halifax", "Harlow", "Harrogate",
-    "Hemel Hempstead", "High Wycombe", "Kidderminster", "King's Lynn", "Leamington Spa",
-    "Loughborough", "Lowestoft", "Macclesfield", "Maidenhead", "Margate", "Middlesbrough",
-    
-    // Smaller Towns & Boroughs
-    "Aylesbury", "Banbury", "Barrow-in-Furness", "Batley", "Beverley", "Bexley",
-    "Bognor Regis", "Boston", "Bridgwater", "Bromsgrove", "Burton upon Trent",
-    "Bury St Edmunds", "Camberley", "Cannock", "Chatham", "Chichester", "Chorley",
-    "Clacton-on-Sea", "Coalville", "Corby", "Dewsbury", "Dover", "Ealing", "Ellesmere Port",
-    "Epsom", "Esher", "Fareham", "Farnborough", "Folkestone", "Grantham", "Gravesend",
-    "Great Yarmouth", "Grays", "Guildford", "Halesowen", "Havant", "Hereford",
-    "Hinckley", "Horsham", "Kettering", "Kingswood", "Letchworth", "Lichfield",
-    "Littlehampton", "Loughton", "Macclesfield", "Maldon", "Melton Mowbray", "Newbury",
-    "Newcastle-under-Lyme", "Newhaven", "Newton Abbot", "Nuneaton", "Oldbury",
-    "Orpington", "Paignton", "Poole", "Rayleigh", "Redditch", "Redhill", "Reigate",
-    "Richmond", "Romford", "Royal Tunbridge Wells", "Rugby", "Runcorn", "Salisbury",
-    "Scarborough", "Sevenoaks", "Shoreham-by-Sea", "Skegness", "Solihull", "South Shields",
-    "Southport", "St Albans", "St Helens", "Stafford", "Staines", "Stevenage",
-    "Stockton-on-Tees", "Stratford-upon-Avon", "Stroud", "Sutton Coldfield", "Tamworth",
-    "Taunton", "Thetford", "Tonbridge", "Torquay", "Truro", "Uxbridge", "Walton-on-Thames",
-    "Warwick", "Weymouth", "Widnes", "Winchester", "Woking", "Wokingham", "Yeovil"
-  ],
-  
-  "Scotland": [
-    // Major Cities
-    "Glasgow", "Edinburgh", "Aberdeen", "Dundee", 
-    
-    // Large Towns
-    "Paisley", "East Kilbride", "Livingston", "Hamilton", "Cumbernauld", "Kirkcaldy",
-    "Dunfermline", "Ayr", "Perth", "Kilmarnock", "Inverness", "Greenock", "Coatbridge",
-    "Glenrothes", "Motherwell", "Stirling", "Wishaw", "Airdrie", "Falkirk", "Dumfries",
-    
-    // Medium & Smaller Towns
-    "Rutherglen", "Clydebank", "Bearsden", "Cambuslang", "Newton Mearns", "Bishopbriggs",
-    "Musselburgh", "Arbroath", "Elgin", "Renfrew", "Alloa", "Bellshill", "Dumbarton",
-    "Grangemouth", "Bathgate", "Kirkintilloch", "Larkhall", "Barrhead", "Irvine",
-    "Forfar", "Stranraer", "Montrose", "Kelso", "Fort William", "Galashiels", "Hawick"
-  ],
-  
-  "Wales": [
-    // Major Cities & Large Towns
-    "Cardiff", "Swansea", "Newport", "Wrexham", "Barry", "Cwmbran", "Bridgend",
-    "Merthyr Tydfil", "Caerphilly", "Rhondda", "Port Talbot", "Llanelli", "Pontypridd",
-    "Aberdare", "Colwyn Bay", "Aberystwyth", "Bangor",
-    
-    // Medium & Smaller Towns
-    "Carmarthen", "Ebbw Vale", "Maesteg", "Penarth", "Flint", "Conwy", "Prestatyn",
-    "Holyhead", "Llandudno", "Llantrisant", "Milford Haven", "Mold", "Mountain Ash",
-    "Neath", "Nelson", "Pembroke Dock", "Penmaenmawr", "Porthmadog", "Risca",
-    "Shotton", "Tonypandy", "Tredegar", "Ystrad Mynach"
-  ],
-  
-  "Northern Ireland": [
-    // Major Cities
-    "Belfast", "Derry", "Londonderry", "Lisburn", "Newtownabbey",
-    
-    // Large Towns
-    "Bangor", "Craigavon", "Castlereagh", "Ballymena", "Newry", "Carrickfergus",
-    "Newtownards", "Coleraine", "Omagh", "Larne", "Banbridge", "Enniskillen",
-    
-    // Medium & Smaller Towns
-    "Antrim", "Armagh", "Ballymoney", "Ballynahinch", "Cookstown", "Downpatrick",
-    "Dungannon", "Holywood", "Limavady", "Lurgan", "Magherafelt", "Newcastle",
-    "Portrush", "Portadown", "Portaferry", "Portstewart", "Strabane", "Warrenpoint"
+  "Essex": [
+    "Basildon", "Billericay", "Braintree", "Brentwood", "Burnham-on-Crouch",
+    "Canvey Island", "Chelmsford", "Chigwell", "Clacton-on-Sea", "Colchester",
+    "Epping", "Frinton-on-Sea", "Grays", "Harlow", "Harwich",
+    "Leigh-on-Sea", "Maldon", "Rayleigh", "Rochford", "Saffron Walden",
+    "South Benfleet", "Southend-on-Sea", "Stanford-le-Hope", "Tilbury",
+    "Walton-on-the-Naze", "West Mersea", "Witham", "Wivenhoe",
+    "Alresford", "Brightlingsea", "Buckhurst Hill", "Coggeshall", "Dedham",
+    "Great Dunmow", "Halstead", "Manningtree", "Pitsea", "Thaxted",
+    "Waltham Abbey", "Westcliff-on-Sea", "Wickford"
   ]
 };
 
