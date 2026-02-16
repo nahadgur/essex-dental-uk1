@@ -10,16 +10,15 @@ import { FAQS_HOME } from '@/lib/data';
 
 // Marquee images for Results section  
 const MARQUEE_IMAGES = [
-  'https://images.unsplash.com/photo-1609840114035-3c981b782dfe?q=80&w=1170&auto=format&fit=crop',
-  'https://images.unsplash.com/photo-1695275884195-70381520643d?q=80&w=1170&auto=format&fit=crop',
-  'https://images.unsplash.com/photo-1654105929878-77b7635232da?q=80&w=1164&auto=format&fit=crop',
-  'https://images.unsplash.com/photo-1656623944690-9366fb1aba9b?q=80&w=1170&auto=format&fit=crop',
-  'https://images.pexels.com/photos/13085186/pexels-photo-13085186.jpeg',
-  'https://images.pexels.com/photos/287227/pexels-photo-287227.jpeg',
+  'https://images.unsplash.com/photo-1593022356769-11f762e25ed9?q=80&w=1170&auto=format&fit=crop',
+  'https://images.pexels.com/photos/6502343/pexels-photo-6502343.jpeg',
+  'https://images.pexels.com/photos/4687905/pexels-photo-4687905.jpeg',
+  'https://images.pexels.com/photos/6629364/pexels-photo-6629364.jpeg',
+  'https://images.pexels.com/photos/5355826/pexels-photo-5355826.jpeg',
+  'https://images.pexels.com/photos/3779699/pexels-photo-3779699.jpeg',
   'https://images.pexels.com/photos/28470229/pexels-photo-28470229.jpeg',
-  'https://images.pexels.com/photos/11887613/pexels-photo-11887613.jpeg',
-  'https://images.pexels.com/photos/13085186/pexels-photo-13085186.jpeg',
 ];
+
 
 const CountUp: React.FC<{ end: number; suffix?: string; decimals?: number }> = ({ end, suffix = "", decimals = 0 }) => {
   const [count, setCount] = useState(0);
@@ -160,7 +159,7 @@ export default function Home() {
               {
                 icon: <Sparkles className="w-8 h-8" />,
                 title: 'Eat Anything',
-                desc: 'Bite force comparable to natural teeth. Enjoy steak, apples, and all your favorite foods without restrictions or worry.'
+                desc: 'Bite force comparable to natural teeth. Enjoy steak, apples, and all your favourite foods without restrictions or worry.'
               },
               {
                 icon: <Calendar className="w-8 h-8" />,
