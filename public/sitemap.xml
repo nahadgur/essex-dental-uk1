@@ -36,86 +36,88 @@ function generateSitemap() {
   const baseUrl = 'https://essexdentalimplants.com'; // Update this to your actual domain
   const today = new Date().toISOString().split('T')[0];
   
-  let sitemap = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  const urls = [];
   
-  <!-- Homepage -->
-  <url>
-    <loc>${baseUrl}</loc>
-    <lastmod>${today}</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
+  // Homepage
+  urls.push({
+    loc: baseUrl,
+    lastmod: today,
+    changefreq: 'weekly',
+    priority: '1.0'
+  });
 
-  <!-- Main Services Page -->
-  <url>
-    <loc>${baseUrl}/services</loc>
-    <lastmod>${today}</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
+  // Main Services Page
+  urls.push({
+    loc: `${baseUrl}/services`,
+    lastmod: today,
+    changefreq: 'weekly',
+    priority: '0.9'
+  });
 
-  <!-- Main Locations Page -->
-  <url>
-    <loc>${baseUrl}/location</loc>
-    <lastmod>${today}</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
+  // Main Locations Page
+  urls.push({
+    loc: `${baseUrl}/location`,
+    lastmod: today,
+    changefreq: 'weekly',
+    priority: '0.9'
+  });
 
-  <!-- Blog Main Page -->
-  <url>
-    <loc>${baseUrl}/blog</loc>
-    <lastmod>${today}</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-`;
+  // Blog Main Page
+  urls.push({
+    loc: `${baseUrl}/blog`,
+    lastmod: today,
+    changefreq: 'weekly',
+    priority: '0.8'
+  });
 
   // Individual Service Pages
   services.forEach(service => {
-    sitemap += `  <!-- Service: ${service} -->
-  <url>
-    <loc>${baseUrl}/services/${service}</loc>
-    <lastmod>${today}</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-`;
-  });
-
-  // Individual Location Pages (Essex towns)
-  locations.forEach(location => {
-    const slug = slugify(location);
-    sitemap += `  <!-- Location: ${location} -->
-  <url>
-    <loc>${baseUrl}/location/${slug}</loc>
-    <lastmod>${today}</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-`;
-  });
-
-  // Service × Location Pages (252 pages: 6 services × 42 locations)
-  services.forEach(service => {
-    locations.forEach(location => {
-      const locationSlug = slugify(location);
-      sitemap += `  <url>
-    <loc>${baseUrl}/services/${service}/${locationSlug}</loc>
-    <lastmod>${today}</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-`;
+    urls.push({
+      loc: `${baseUrl}/services/${service}`,
+      lastmod: today,
+      changefreq: 'monthly',
+      priority: '0.8'
     });
   });
 
-  sitemap += `
-</urlset>`;
+  // Individual Location Pages
+  locations.forEach(location => {
+    const slug = slugify(location);
+    urls.push({
+      loc: `${baseUrl}/location/${slug}`,
+      lastmod: today,
+      changefreq: 'monthly',
+      priority: '0.7'
+    });
+  });
+
+  // Service × Location Pages
+  services.forEach(service => {
+    locations.forEach(location => {
+      const locationSlug = slugify(location);
+      urls.push({
+        loc: `${baseUrl}/services/${service}/${locationSlug}`,
+        lastmod: today,
+        changefreq: 'monthly',
+        priority: '0.6'
+      });
+    });
+  });
+
+  // Build XML
+  let sitemap = '<?xml version="1.0" encoding="UTF-8"?>\n';
+  sitemap += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n';
+  
+  urls.forEach(url => {
+    sitemap += '  <url>\n';
+    sitemap += `    <loc>${url.loc}</loc>\n`;
+    sitemap += `    <lastmod>${url.lastmod}</lastmod>\n`;
+    sitemap += `    <changefreq>${url.changefreq}</changefreq>\n`;
+    sitemap += `    <priority>${url.priority}</priority>\n`;
+    sitemap += '  </url>\n';
+  });
+  
+  sitemap += '</urlset>';
 
   return sitemap;
 }
@@ -128,5 +130,5 @@ console.log('✅ Sitemap generated successfully!');
 console.log(`📍 Total Essex locations: ${locations.length}`);
 console.log(`🦷 Total services: ${services.length}`);
 console.log(`📄 Total Service × Location pages: ${services.length * locations.length}`);
-console.log(`📊 Total URLs in sitemap: ${6 + services.length + locations.length + (services.length * locations.length)}`);
+console.log(`📊 Total URLs in sitemap: ${4 + services.length + locations.length + (services.length * locations.length)}`);
 console.log('💾 Saved to: public/sitemap.xml');
